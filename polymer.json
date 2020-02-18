@@ -1,0 +1,34 @@
+
+{
+  "npm": true,
+  "entrypoint": "index.html",
+  "shell": "src/advertisement-app/advertisement-app.js",
+  "sources": [
+    "src/**/*",
+    "manifest/**",
+    "images/*",
+    "package.json"
+  ],
+  "fragments": [
+    "src/advertisement-app/login-page.js",
+    "src/advertisement-app/admin-page.js",
+    "src/advertisement-app/sales-page.js",
+    "src/advertisement-app/view404-page.js"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "moduleResolution": "node",
+  "builds": [
+    {
+      "preset": "es6-unbundled",
+      "addServiceWorker": true
+    }
+  ],
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  }
+}
